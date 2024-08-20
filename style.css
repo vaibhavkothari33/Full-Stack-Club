@@ -1,4 +1,6 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
 
 * {
     margin: 0;
@@ -14,18 +16,26 @@ body {
     min-height: 100vh;
     background: #1E1E2F; 
 }
-
+#background-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+}
 .card .front-view span {
     font-size: 40px;
     color: #1E1E2F;
 }
-.view1{
-    height: 250px;
-    width: 250px;
-}
 
 .wrapper {
     padding: 25px;
+    z-index: 100;
     border-radius: 10px;
     background: #E0E0E0; 
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -34,7 +44,7 @@ body {
     scale: 300%;
 }
 .tut{
-    scale: 200%;
+    scale: 180%;
 }
 .cards,
 .card,
@@ -115,6 +125,47 @@ body {
 .card.flip .front-view {
     transform: rotateY(180deg);
 }
+@media screen and (min-width: 2560px) {
+    .cards {
+        height:950px;
+        width: 950px;
+    }
+
+    .card .front-view img {
+        width: 17px;
+    }
+
+    .card .back-view img {
+        max-width: 300px;
+    }
+    .tu{
+        scale: 900%;
+    }
+    .tut{
+        scale: 85%;
+    }
+}
+@media screen and (min-width: 1440px) {
+    .cards {
+        height:850px;
+        width: 850px;
+    }
+
+    .card .front-view img {
+        width: 17px;
+    }
+
+    .card .back-view img {
+        max-width: 300px;
+    }
+    .tu{
+        scale: 900%;
+    }
+    .tut{
+        scale: 90%;
+    }
+}
+
 
 @media screen and (max-width: 700px) {
     .cards {
