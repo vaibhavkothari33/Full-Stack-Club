@@ -46,7 +46,3 @@ Welcome to the **Memory Game**, developed for the **Full Stack Club at Bennett U
 1. Clone the repository or download the project files.
 2. Open the `index.html` file in any modern web browser.
 3. Enjoy the game!
-
-# Author
-
-This project was developed by **Vaibhav Kothari**, the Technical Co-Head of the Full Stack Club at Bennett University.
