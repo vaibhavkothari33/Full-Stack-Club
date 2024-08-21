@@ -14,6 +14,67 @@ body {
   min-height: 100vh;
   background: #1e1e2f;
 }
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 100;
+  }
+  
+  .game-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  #leaderboard {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    max-width: 200px;
+  }
+  
+  #leaderboard h3 {
+    text-align: center;
+    color: white;
+    margin-bottom: 10px;
+  }
+  
+  #leaderboard-list {
+    list-style: none;
+    padding: 0;
+    color: white;
+  }
+  
+  #timer {
+    font-size: 45px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: green;
+  }
+  
+  #qr-code {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+  }
+/*   
+  @media screen and (max-width: 700px) {
+    .game-container {
+      flex-direction: column;
+    }
+  
+    #leaderboard {
+      margin-top: 20px;
+      max-width: 100%;
+    }
+  }
+   */
 #background-video {
   position: fixed;
   top: 50%;
@@ -30,19 +91,18 @@ body {
   font-size: 40px;
   color: #1e1e2f;
 }
-.timer {
-    font-size: 24px;
-    color: white;
-    margin-bottom: 20px;
-    text-align: center;
-    font-size: 45px;
-}
+/* #timer {
+  font-size: 24px;
+  color: white;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 45px;
+} */
+
 .wrapper {
   padding: 25px;
   z-index: 100;
   border-radius: 10px;
-  /* background: transparent; 
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); */
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
@@ -84,7 +144,7 @@ body {
 }
 
 .card.shake {
-  animation: shake 0.5s ease-in-out;
+  animation: shake 0.15s ease-in-out;
 }
 
 @keyframes shake {
@@ -115,7 +175,7 @@ body {
   pointer-events: none;
   backface-visibility: hidden;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.25s linear;
+  transition: transform 0.10s linear;
 }
 
 .card .front-view img {
@@ -156,7 +216,7 @@ body {
   .tut {
     scale: 85%;
   }
-  .timer{
+  /* #timer {
     z-index: 100;
     font-size: 100px;
     height: 50px;
@@ -165,8 +225,7 @@ body {
     position: absolute;
     top: 5%;
     color: white;
-    
-}
+  } */
 }
 @media screen and (min-width: 1440px) {
   .cards {
@@ -201,6 +260,14 @@ body {
 
   .card .back-view img {
     max-width: 40px;
+  }
+  .game-container {
+    flex-direction: column;
+  }
+
+  #leaderboard {
+    margin-top: 20px;
+    max-width: 100%;
   }
 }
 
