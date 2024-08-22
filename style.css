@@ -278,8 +278,8 @@ body {
 }
 @media screen and (max-width: 1440px) {
   .cards {
-    height: 750px;
-    width: 750px;
+    height: 700px;
+    width: 700px;
   }
 
   .card .front-view img {
@@ -293,7 +293,7 @@ body {
     scale: 900%;
   }
   .tut {
-    scale: 90%;
+    scale: 60%;
   }
 }
 
@@ -313,10 +313,11 @@ body {
   .game-container {
     flex-direction: column;
   }
-
-  #leaderboard {
-    margin-top: 20px;
-    max-width: 100%;
+  .tu {
+    scale: 900%;
+  }
+  .tut {
+    scale: 55%;
   }
 }
 
