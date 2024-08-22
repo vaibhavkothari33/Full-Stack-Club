@@ -1,5 +1,5 @@
 # Full Stack Club
-# Code Create Conqure
+# Code Create Conquer
 # Memory Game
 
 Welcome to the **Memory Game**, developed for the **Full Stack Club at Bennett University**. This interactive and visually appealing game was created to be showcased at the **Code Carnival event**. The game challenges players to test their memory by matching pairs of cards, making it both entertaining and educational.
