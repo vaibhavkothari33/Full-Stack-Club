@@ -237,7 +237,7 @@ body {
     scale: 900%;
   }
   .tut {
-    scale: 80%;
+    scale: 70%;
   }
   /* .img22{
     scale: 70%;
@@ -274,21 +274,11 @@ body {
     left: 70px;
     top: 50px;
   }
-  /* #timer {
-    z-index: 100;
-    font-size: 100px;
-    height: 50px;
-    width: 800px;
-    text-align: center;
-    position: absolute;
-    top: 5%;
-    color: white;
-  } */
 }
 @media screen and (max-width: 1440px) {
   .cards {
-    height: 850px;
-    width: 850px;
+    height: 750px;
+    width: 750px;
   }
 
   .card .front-view img {
@@ -308,8 +298,8 @@ body {
 
 @media screen and (max-width: 700px) {
   .cards {
-    height: 350px;
-    width: 350px;
+    height: 550px;
+    width: 550px;
   }
 
   .card .front-view img {
