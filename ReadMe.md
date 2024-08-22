@@ -2,7 +2,7 @@
 # Code Create Conquer
 # Memory Game
 
-Welcome to the **Memory Game**, developed for the **Full Stack Club at Bennett University**. This interactive and visually appealing game was created to be showcased at the **Code Carnival event**. The game challenges players to test their memory by matching pairs of cards, making it both entertaining and educational.
+Welcome to the **Memory Game**, developed for the **Full Stack Club at Bennett University**. This interactive and visually appealing game was created to be showcased at the **Club Carnival event**. The game challenges players to test their memory by matching pairs of cards, making it both entertaining and educational.
 
 # Features
 
@@ -48,3 +48,6 @@ Welcome to the **Memory Game**, developed for the **Full Stack Club at Bennett U
 1. Clone the repository or download the project files.
 2. Open the `index.html` file in any modern web browser.
 3. Enjoy the game!
+
+# Developed by
+This project was developed by **Vaibhav Kothari**, the Technical Co-Head of the Full Stack Club at Bennett University.
