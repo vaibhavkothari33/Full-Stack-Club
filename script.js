@@ -1,16 +1,21 @@
 const cards = document.querySelectorAll('.card');
-const timerDisplay = document.getElementById('timer');
 let matched = 0;
 let cardOne, cardTwo;
 let disableDeck = false;
+const timerElement = document.getElementById('timer');
 let timeLeft = 20;
 let timerStarted = false;
+const resetButton = document.getElementById('reset-btn');
 let countdown;
+let moves = 0;
+let matchedPairs = 0;
+let flippedCards = [];
+let gameStarted = false;
 
 function startTimer() {
     countdown = setInterval(() => {
         timeLeft--;
-        timerDisplay.textContent = `${timeLeft}s`;
+        updateTimerDisplay();
         if (timeLeft === 0) {
             clearInterval(countdown);
             disableDeck = true; // Stops the game when time runs out
@@ -20,12 +25,23 @@ function startTimer() {
     }, 1000);
 }
 
+function updateTimerDisplay() {
+    timerElement.textContent = `${timeLeft}s`;
+    if (timeLeft <= 5) {
+        timerElement.style.color = 'red';
+    } else if (timeLeft <= 10) {
+        timerElement.style.color = 'yellow';
+    } else {
+        timerElement.style.color = 'green';
+    }
+}
+
 function flipCard({ target: clickedCard }) {
     if (!timerStarted) {
         startTimer();
         timerStarted = true;
     }
-    
+
     if (cardOne !== clickedCard && !disableDeck) {
         clickedCard.classList.add('flip');
         if (!cardOne) {
@@ -42,7 +58,7 @@ function flipCard({ target: clickedCard }) {
 function matchCards(img1, img2) {
     if (img1 === img2) {
         matched++;
-        if (matched == 8) {
+        if (matched > 3) {
             clearInterval(countdown); // Stop the timer when all cards are matched
             setTimeout(() => {
                 alert("Congratulations! You won the game.");
@@ -66,13 +82,34 @@ function matchCards(img1, img2) {
     }, 1200);
 }
 
+function endGame() {
+    resetButton.classList.remove('hidden');
+    let score = matchedPairs * 100 - moves * 10;
+    leaderboardList.innerHTML += `<li>${playerName} - Score: ${score}, Moves: ${moves}</li>`;
+}
+
+resetButton.addEventListener('click', resetGame);
+
+function resetGame() {
+    gameStarted = false;
+    timeLeft = 20;
+    moves = 0;
+    matchedPairs = 0;
+    flippedCards = [];
+    clearInterval(countdown);
+    updateTimerDisplay();
+    resetButton.classList.add('hidden');
+    cards.forEach(card => card.classList.remove('flipped'));
+    shuffleCard();
+}
+
 function shuffleCard() {
     matched = 0;
     disableDeck = false;
     cardOne = cardTwo = '';
     timerStarted = false;
     timeLeft = 20;
-    timerDisplay.textContent = `${timeLeft}s`;
+    updateTimerDisplay();
     clearInterval(countdown);
 
     let arr = [1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8];

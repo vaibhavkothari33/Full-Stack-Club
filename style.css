@@ -30,7 +30,7 @@ body {
     width: 100%;
     max-width: 800px;
   }
-  
+/*   
   #leaderboard {
     padding: 20px;
     background: rgba(255, 255, 255, 0.25);
@@ -43,26 +43,49 @@ body {
     text-align: center;
     color: white;
     margin-bottom: 10px;
-  }
-  
+  } */
+/*   
   #leaderboard-list {
     list-style: none;
     padding: 0;
     color: white;
-  }
-  
+  } */
+  #reset-btn {
+    background-color: #E91E63;
+    height: 45px;
+    width: 75px;
+    color: white;
+    font-size: 25px;
+    position: fixed;
+    bottom: 30px;
+    left: 350px;
+}
+
+.qr-code {
+    width: 200px;
+    position: fixed;
+    bottom: 20px;
+    left: 100px;
+}
+.text{
+  color: whitesmoke;
+  text-align: center;
+}
   #timer {
-    font-size: 45px;
+    font-size: 85px;
     margin-bottom: 20px;
     text-align: center;
     color: green;
+    position: fixed;
+    left: 100px;
+    top: 50px;
   }
   
-  #qr-code {
-    position: absolute;
+  /* #qr-code {
+    position: fixed;
     bottom: 10px;
-    left: 10px;
-  }
+    left: 100px;
+  } */
 /*   
   @media screen and (max-width: 700px) {
     .game-container {
@@ -215,6 +238,37 @@ body {
   }
   .tut {
     scale: 85%;
+  }
+  #reset-btn {
+    background-color: #E91E63;
+    height: 45px;
+    width: 75px;
+    color: white;
+    font-size: 25px;
+    position: fixed;
+    bottom: 30px;
+    left: 350px;
+}
+
+.qr-code {
+    width: 200px;
+    position: fixed;
+    bottom: 20px;
+    left: 100px;
+}
+.text{
+  color: whitesmoke;
+  text-align: center;
+}
+  #timer {
+    font-size: 100px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    text-align: center;
+    color: green;
+    position: fixed;
+    left: 100px;
+    top: 50px;
   }
   /* #timer {
     z-index: 100;
